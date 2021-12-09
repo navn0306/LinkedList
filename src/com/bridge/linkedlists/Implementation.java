@@ -2,6 +2,14 @@ package com.bridge.linkedlists;
 
 public class Implementation {
     public static void main(String[] args) {
-        System.out.println("\n Welcome, this program represents the implementation of LinkedLists");
+
+        LinkedList list = new LinkedList();
+
+        list.insert(56);
+        list.insert(30);
+        list.insert(70);
+
+        list.show();
     }
 }
+
