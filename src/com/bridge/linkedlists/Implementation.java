@@ -10,7 +10,8 @@ public class Implementation {
         Scanner c = new Scanner(System.in);
         int ch;
         System.out.println("To add data to list enter 1 \nTo add data to at front of list enter 2\n" +
-                "To add data to at rear of list enter 3\n" + "To add data at middle of list enter 4\n" + "To delete data from front enter 5\n");
+                "To add data to at rear of list enter 3\n" + "To add data at middle of list enter 4\n" +
+                "To delete data from front enter 5\n" + "To delete at end of the list enter 6\n");
         ch = c.nextInt();
         switch (ch) {
             case 1:
@@ -43,7 +44,13 @@ public class Implementation {
                 list.deleteAtFront();
                 list.show();
                 break;
-
+            case 6:
+                list.insert(56);
+                list.insert(30);
+                list.insert(70);
+                list.deleteAtEnd();
+                list.show();
+                break;
             default:
         }
     }

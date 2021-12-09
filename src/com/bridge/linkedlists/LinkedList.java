@@ -73,4 +73,21 @@ public class LinkedList {
         }
     }
 
+    public void deleteAtEnd() {
+        if (head != null) {
+            Node current = head;
+
+            if (current.next == null) {
+                head = current.next;
+            } else {
+                while (current.next.next != null) {
+                    current = current.next;
+                }
+                current.next = null;
+            }
+        } else {
+            System.out.println("Linked list is empty");
+        }
+    }
+
 }
