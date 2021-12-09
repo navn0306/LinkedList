@@ -46,6 +46,23 @@ public class LinkedList {
             }
             current.next = node;
         }
+    }
+
+    public void insertAtMiddle(int data) {
+        Node node = new Node(data);
+
+        if (head == null) {
+            head = node;
+        } else {
+            Node slow, fast;
+            slow = fast = head;
+            while (fast.next != null && fast.next.next != null){
+                slow = slow.next;
+                fast = fast.next.next;
+            }
+            node.next=slow.next;
+            slow.next = node;
+        }
 
 
     }
