@@ -1,8 +1,7 @@
 package com.bridge.linkedlists;
 
 public class LinkedList {
-    public Node third;
-    Node head, second;
+    Node head;
 
     public void insert(int data) {
         Node node = new Node(data);
@@ -138,7 +137,7 @@ public class LinkedList {
     }
 
     public int size() {
-        int count=0;
+        int count = 0;
         if (head == null) {
             return 0;
         } else {
@@ -146,9 +145,35 @@ public class LinkedList {
                 count++;
                 head = head.next;
             }
-            System.out.println("\nSize of the list is : "+count);
+            System.out.println("\nSize of the list is : " + count);
         }
         return count;
+    }
+
+    public void sortingWhileadding(int data) {
+        Node node = new Node(data);
+        if (head == null) {
+            head = node;
+            return;
+        } else if (node.data <= head.data) {
+            node.next = head;
+            head = node;
+            return;
+        }
+        Node current = head.next, previous = head;
+        while (current != null) {
+            if (node.data <= current.data) {
+                previous.next = node;
+                node.next = current;
+                break;
+            } else if (current.next == null) {
+                current.next = node;
+                current = node;
+                break;
+            }
+            previous = current;
+            current = current.next;
+        }
     }
 }
 

@@ -12,8 +12,8 @@ public class Implementation {
         System.out.println("To add data to list enter 1 \nTo add data to at front of list enter 2\n" +
                 "To add data to at rear of list enter 3\n" + "To add data at middle of list enter 4\n" +
                 "To delete data from front enter 5\n" + "To delete at end of the list enter 6\n" +
-                "To search the value 30 enter 7\n" + "To add data next to middle element enter 8\n"+
-                "To add data next to 30 element enter 9\n");
+                "To search the value 30 enter 7\n" + "To add data next to middle element enter 8\n" +
+                "To add data next to 30 element enter 9\n"+"To sort the data while adding enter 10");
         ch = c.nextInt();
         switch (ch) {
             case 1:
@@ -99,6 +99,13 @@ public class Implementation {
                 list.size();
 
                 break;
+            case 10:
+                System.out.println("Sorting the list while adding the elements");
+                list.sortingWhileadding(56);
+                list.sortingWhileadding(30);
+                list.sortingWhileadding(40);
+                list.sortingWhileadding(70);
+                list.show();
             default:
         }
     }
