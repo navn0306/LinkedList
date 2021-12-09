@@ -90,4 +90,20 @@ public class LinkedList {
         }
     }
 
+    public boolean search(int data) {
+
+        if (head == null) {
+            return false;
+        }
+        Node current = head;
+        while (current != null) {
+            if (current.data == data) {
+                System.out.println("Value found");
+                return true;
+            }
+            current = current.next;
+        }
+        return false;
+    }
+
 }
