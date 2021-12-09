@@ -56,15 +56,21 @@ public class LinkedList {
         } else {
             Node slow, fast;
             slow = fast = head;
-            while (fast.next != null && fast.next.next != null){
+            while (fast.next != null && fast.next.next != null) {
                 slow = slow.next;
                 fast = fast.next.next;
             }
-            node.next=slow.next;
+            node.next = slow.next;
             slow.next = node;
         }
+    }
 
-
+    public void deleteAtFront() {
+        if (head != null) {
+            head = head.next;
+        } else {
+            System.out.println("Node is Empty");
+        }
     }
 
 }
