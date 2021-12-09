@@ -11,7 +11,8 @@ public class Implementation {
         int ch;
         System.out.println("To add data to list enter 1 \nTo add data to at front of list enter 2\n" +
                 "To add data to at rear of list enter 3\n" + "To add data at middle of list enter 4\n" +
-                "To delete data from front enter 5\n" + "To delete at end of the list enter 6\n" + "To search the value 30 enter 7\n");
+                "To delete data from front enter 5\n" + "To delete at end of the list enter 6\n" +
+                "To search the value 30 enter 7\n" + "To add data next to middle element enter 8\n");
         ch = c.nextInt();
         switch (ch) {
             case 1:
@@ -56,6 +57,13 @@ public class Implementation {
                 list.insert(30);
                 list.insert(70);
                 list.search(30);
+                list.show();
+                break;
+            case 8:
+                list.insert(56);
+                list.insert(30);
+                list.insert(70);
+                list.insertAfter(30, 40);
                 list.show();
                 break;
             default:

@@ -1,7 +1,8 @@
 package com.bridge.linkedlists;
 
 public class LinkedList {
-    Node head;
+    public Node third;
+    Node head, second;
 
     public void insert(int data) {
         Node node = new Node(data);
@@ -106,4 +107,36 @@ public class LinkedList {
         return false;
     }
 
+    public void insertAfter(int data, int nextNode) {
+        Node newNode = new Node(nextNode);
+        if (head == null) {
+            System.out.println("List is empty");
+        }
+        Node current = head;
+        while (current != null) {
+            if (current.data == data) {
+                System.out.println("Value found");
+                newNode.next = current.next;
+                current.next = newNode;
+            }
+            current = current.next;
+        }
+    }
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
