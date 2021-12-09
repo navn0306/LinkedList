@@ -92,8 +92,8 @@ public class LinkedList {
     }
 
     public boolean search(int data) {
-
         if (head == null) {
+            System.out.println("Value not found");
             return false;
         }
         Node current = head;
@@ -123,6 +123,33 @@ public class LinkedList {
         }
     }
 
+    public void deleteAfter(int data) {
+        if (head == null) {
+            System.out.println("List is empty");
+        }
+        Node current = head;
+        while (current != null) {
+            if (current.data == data) {
+                Node newNode = current.next;
+                current.next = newNode.next;
+            }
+            current = current.next;
+        }
+    }
+
+    public int size() {
+        int count=0;
+        if (head == null) {
+            return 0;
+        } else {
+            while (head != null) {
+                count++;
+                head = head.next;
+            }
+            System.out.println("\nSize of the list is : "+count);
+        }
+        return count;
+    }
 }
 
 
