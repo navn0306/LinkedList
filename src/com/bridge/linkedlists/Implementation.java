@@ -101,10 +101,10 @@ public class Implementation {
                 break;
             case 10:
                 System.out.println("Sorting the list while adding the elements");
-                list.sortingWhileadding(56);
-                list.sortingWhileadding(30);
-                list.sortingWhileadding(40);
-                list.sortingWhileadding(70);
+                list.sortingWhileAdding(56);
+                list.sortingWhileAdding(30);
+                list.sortingWhileAdding(40);
+                list.sortingWhileAdding(70);
                 list.show();
             default:
         }

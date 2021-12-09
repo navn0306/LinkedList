@@ -114,7 +114,6 @@ public class LinkedList {
         Node current = head;
         while (current != null) {
             if (current.data == data) {
-                System.out.println("Value found");
                 newNode.next = current.next;
                 current.next = newNode;
             }
@@ -150,7 +149,7 @@ public class LinkedList {
         return count;
     }
 
-    public void sortingWhileadding(int data) {
+    public void sortingWhileAdding(int data) {
         Node node = new Node(data);
         if (head == null) {
             head = node;
